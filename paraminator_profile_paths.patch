@@ -1,0 +1,20 @@
+--- paraminator.py	2011-02-15 10:16:41.000000000 -0500
++++ paraminator2.py	2011-02-26 23:25:01.000000000 -0500
+@@ -60,7 +60,7 @@
+ 	def __init__(self, prefsFile, parameter, start, end, increment, output):
+ 
+ 		self.prefsFile = prefsFile
+-		self.prefsDir = os.path.dirname(prefsFile)
++		self.prefsDir = os.path.dirname(os.path.dirname(os.path.dirname(os.path.dirname(prefsFile))))
+ 		self.parameter = parameter
+ 		self.start = start				
+ 		self.end = end
+@@ -92,7 +92,7 @@
+ 		shutil.copytree(self.prefsDir, tempDir)
+ 
+ 		#edit our prefs in place.
+-		tempPrefs = "%s/%s" % (tempDir, os.path.basename(self.prefsFile))
++		tempPrefs = "%s/profiles/extrusion/ABS/%s" % (tempDir, os.path.basename(self.prefsFile))
+ 		self.tweakFile(tempPrefs, self.getParameter(i))
+ 
+ 		#generate our gcode file

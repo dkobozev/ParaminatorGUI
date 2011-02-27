@@ -1,0 +1,29 @@
+Paraminator GUI
+===============
+
+About
+-----
+Paraminator GUI is a graphical front-end to ReplicatorG's paraminator
+script used to generate Skeinforge test files.
+
+Requirements
+------------
+Paraminator GUI requires Python and PyGTK. It's been tested with Python 2.7
+and PyGTK 2.22.
+
+I had to change a couple of paths in the paraminator script to make it work.
+Included is the patch with the changes I had to make.
+
+Usage
+-----
+Due to paraminator's limitations, Paraminator GUI has to be run from the same
+directory paraminator lives in. To launch, run
+
+----
+python paraminatorgui.py
+----
+
+After running for the first time, the program will generate an .ini file 
+with its configuration settings. If you want to change the path to your Python
+interpreter, you'd have to edit this file manually. Other settings can be
+modified from the program itself.
